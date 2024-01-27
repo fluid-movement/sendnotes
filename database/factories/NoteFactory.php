@@ -19,7 +19,7 @@ class NoteFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'body' => $this->faker->paragraph,
-            'send_date' => $this->faker->dateTimeBetween('now', '+1 week'),
+            'send_date' => $this->faker->dateTimeBetween('now', '+1 week')->format('Y-m-d'),
             'is_published' => $this->faker->boolean,
             'recipient' => $this->faker->email,
         ];
